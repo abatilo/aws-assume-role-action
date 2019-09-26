@@ -1,5 +1,6 @@
 # aws-assume-role-action
-A GitHub Action which sets your AWS environment variables so that it can assume a role
+[![Actions Status](https://github.com/abatilo/aws-assume-role-action/workflows/assume-role/badge.svg)](https://github.com/abatilo/aws-assume-role-action/actions)
+A GitHub Action which sets your AWS environment variables so that it can assume a role.
 
 Example usage
 ```yaml
@@ -8,7 +9,7 @@ on:
     branches:
       - master
 
-name: Test assume-role
+name: assume-role
 jobs:
   assume-role:
     name: Assume Role
