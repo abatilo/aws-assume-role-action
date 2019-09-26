@@ -1,10 +1,4 @@
-on:
-  push:
-    branches:
-      - master
-  pull_requests:
-    branches:
-      - '*'
+on: push
 
 name: assume-role
 jobs:
