@@ -2,10 +2,12 @@
 
 role_arn=$ROLE_ARN
 role_session_name=$ROLE_SESSION_NAME
+duration=${DURATION_SECONDS:-3600}
 
 creds=$(aws sts assume-role \
   --role-arn $role_arn \
-  --role-session-name $role_session_name)
+  --role-session-name $role_session_name \
+  --duration-seconds $duration)
 
 aws_access_key_id=$(echo $creds | jq -r '.Credentials.AccessKeyId')
 aws_secret_access_key=$(echo $creds | jq -r '.Credentials.SecretAccessKey')
