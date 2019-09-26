@@ -1,7 +1,6 @@
 FROM python:3-alpine
 
-RUN apk update && \
-      apk --no-cache add jq=1.6-r0 && \
+RUN apk --no-cache add jq=1.6-r0 && \
       rm -rf /var/cache/apk/*
 
 COPY requirements.txt /requirements.txt
