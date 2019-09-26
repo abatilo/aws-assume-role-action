@@ -1,5 +1,6 @@
 # aws-assume-role-action
 [![Actions Status](https://github.com/abatilo/aws-assume-role-action/workflows/assume-role/badge.svg)](https://github.com/abatilo/aws-assume-role-action/actions)
+[![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=abatilo/aws-assume-role-action)](https://dependabot.com)
 
 A GitHub Action which sets your AWS environment variables so that it can assume a role.
 
