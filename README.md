@@ -12,10 +12,7 @@ A GitHub Action which sets your AWS environment variables so that it can assume 
 
 Example usage
 ```yaml
-on:
-  push:
-    branches:
-      - master
+on: push
 
 name: assume-role
 jobs:
@@ -31,6 +28,8 @@ jobs:
         ROLE_SESSION_NAME: testing
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        # Optional: Defaults to 3600
+        DURATION_SECONDS: 900
     - name: Identity Check
       uses: actions/aws/cli@master
       with:
@@ -47,6 +46,8 @@ jobs:
         ROLE_SESSION_NAME: testing
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        # Optional: Defaults to 3600
+        DURATION_SECONDS: 900
     - name: Identity Check
       uses: actions/aws/cli@master
       with:
@@ -63,6 +64,8 @@ jobs:
         ROLE_SESSION_NAME: testing
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        # Optional: Defaults to 3600
+        DURATION_SECONDS: 900
     - name: Identity Check
       uses: actions/aws/cli@master
       with:
