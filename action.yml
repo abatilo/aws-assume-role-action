@@ -1,0 +1,9 @@
+name: 'AWS Assume Role Action'
+author: 'Aaron Batilo'
+description: 'An action to use IAM user credentials to assume a role through STS'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+branding:
+  icon: 'users'
+  color: 'orange'
