@@ -2,7 +2,9 @@ on:
   push:
     branches:
       - master
-  pull_requests: {}
+  pull_requests:
+    branches:
+      - '*'
 
 name: assume-role
 jobs:
