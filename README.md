@@ -28,8 +28,9 @@ jobs:
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
     - name: Identity Check
-      run: |
-        aws sts get-caller-identity
+      uses: actions/aws/cli@master
+      with:
+        args: sts get-caller-identity
   use-published-action:
     name: Assume Role with GitHub Marketplace action
     runs-on: ubuntu-latest
@@ -43,8 +44,9 @@ jobs:
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
     - name: Identity Check
-      run: |
-        aws sts get-caller-identity
+      uses: actions/aws/cli@master
+      with:
+        args: sts get-caller-identity
   use-dockerhub-action:
     name: Assume Role with DockerHub action
     runs-on: ubuntu-latest
@@ -58,6 +60,7 @@ jobs:
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
     - name: Identity Check
-      run: |
-        aws sts get-caller-identity
+      uses: actions/aws/cli@master
+      with:
+        args: sts get-caller-identity
 ```
