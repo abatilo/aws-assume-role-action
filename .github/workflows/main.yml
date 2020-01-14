@@ -1,5 +1,4 @@
 on: push
-
 name: assume-role
 jobs:
   assume-role:
@@ -56,3 +55,12 @@ jobs:
       uses: actions/aws/cli@master
       with:
         args: sts get-caller-identity
+  release:
+    needs: [assume-role, use-published-action, use-dockerhub-action]
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: Generate release
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: npx semantic-release
