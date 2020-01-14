@@ -1,12 +1,11 @@
 # aws-assume-role-action
-[![Actions Status](https://github.com/abatilo/aws-assume-role-action/workflows/assume-role/badge.svg)](https://github.com/abatilo/aws-assume-role-action/actions)
+![](https://github.com/abatilo/aws-assume-role-action/workflows/.github/workflows/main.yml/badge.svg)
 [![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=abatilo/aws-assume-role-action)](https://dependabot.com)
 [![Docker
 pulls](https://img.shields.io/docker/pulls/abatilo/aws-assume-role-action.svg)](https://hub.docker.com/r/abatilo/aws-assume-role-action)
 [![Latest
 release](https://img.shields.io/github/v/release/abatilo/aws-assume-role-action?include_prereleases)](https://github.com/abatilo/aws-assume-role-action/releases)
 [![License](https://img.shields.io/github/license/abatilo/aws-assume-role-action)](https://github.com/abatilo/aws-assume-role-action/blob/master/LICENSE)
-[![DockerHub image size](https://images.microbadger.com/badges/image/abatilo/aws-assume-role-action.svg)](https://microbadger.com/images/abatilo/aws-assume-role-action "Get your own image badge on microbadger.com")
 
 A GitHub Action which sets your AWS environment variables so that it can assume a role.
 
