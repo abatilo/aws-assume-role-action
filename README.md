@@ -13,7 +13,6 @@ A GitHub Action which sets your AWS environment variables so that it can assume 
 Example usage
 ```yaml
 on: push
-
 name: assume-role
 jobs:
   assume-role:
@@ -31,9 +30,8 @@ jobs:
         # Optional: Defaults to 3600
         DURATION_SECONDS: 900
     - name: Identity Check
-      uses: actions/aws/cli@master
-      with:
-        args: sts get-caller-identity
+      run: |
+        aws sts get-caller-identity
   use-published-action:
     name: Assume Role with GitHub Marketplace action
     runs-on: ubuntu-latest
@@ -49,9 +47,8 @@ jobs:
         # Optional: Defaults to 3600
         DURATION_SECONDS: 900
     - name: Identity Check
-      uses: actions/aws/cli@master
-      with:
-        args: sts get-caller-identity
+      run: |
+        aws sts get-caller-identity
   use-dockerhub-action:
     name: Assume Role with DockerHub action
     runs-on: ubuntu-latest
@@ -67,7 +64,6 @@ jobs:
         # Optional: Defaults to 3600
         DURATION_SECONDS: 900
     - name: Identity Check
-      uses: actions/aws/cli@master
-      with:
-        args: sts get-caller-identity
+      run: |
+        aws sts get-caller-identity
 ```
