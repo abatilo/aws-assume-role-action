@@ -1,4 +1,7 @@
 # aws-assume-role-action
+
+## DEPRECATED IN FAVOR OF THE OFFICIAL [aws-actions/configure-aws-credentials](https://github.com/aws-actions/configure-aws-credentials)
+
 ![](https://github.com/abatilo/aws-assume-role-action/workflows/.github/workflows/main.yml/badge.svg)
 [![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=abatilo/aws-assume-role-action)](https://dependabot.com)
 [![Docker
